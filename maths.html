@@ -41,7 +41,7 @@
         margin-bottom: 10px;
       }
       p {
-        margin-left: 12px;
+        margin-left: 0px;
       }
     </style>
     <script
@@ -126,11 +126,11 @@
           \[\frac{q-2026}{2026-q}=\frac{-(2026-q)}{2026-q}=-1\]
         </p>
         <p>Akibatnya, \(-1=2026\). Jelas salah!. Penyelesaian selesai.</p>
-        <br>
+        <br />
         <p>
-          <b>GENERALISASI</b>. Namun, jika kita tidak cukup sampai di situ. Sekarang bagaimana jika
-          kita generalisasi persamaan di atas menjadi seperti ini.
-          \[\frac{q-k}{k-q}=k.\]
+          <b>GENERALISASI</b>. Namun, jika kita tidak cukup sampai di situ.
+          Sekarang bagaimana jika kita generalisasi persamaan di atas menjadi
+          seperti ini. \[\frac{q-k}{k-q}=k.\]
         </p>
         <p>
           Apakah ada nilai \(q\) yang memenuhi persamaan tersebut?. Pertama,
@@ -163,24 +163,23 @@
           </div>
           <p>Upload: 4/9/2026</p>
         </div>
+        <p><i>Tentukan digit ke-100 dari</i> \[2011^{2011}\]</p>
         <p>
-          <i>Tentukan digit ke-100 dari</i> \[2011^{2011}\]
+          <u>Solusi</u>. Digit ke-100 bisa ditentukan dengan modulo \(1000\).
+          Diperhatikan berikut ini.
+          \[\left(2011^{2011}\right)\textrm{mod}1000\equiv\left(1+10\right)^{2011}\textrm{mod}1000
+          \] Kemudian, hasil akhir dijabarkan mengunakan
+          <a href="https://en.wikipedia.org/wiki/Binomial_coefficient"
+            >Koefisien Binomial</a
+          >
+          sehingga menjadi
+          \[\sum_{i=0}^{2011}\binom{2011}{i}10^{i}\textrm{mod}1000\] Untuk
+          \(10^{k}\) dengan \(k\geq 3\) akan habis dimodulo \(1000\). Sisanya
+          yaitu \(1+110+500\).
         </p>
-        <p>
-          <u>Solusi</u>. Digit ke-100 bisa ditentukan dengan modulo \(1000\). Diperhatikan berikut ini.
-          \[\left(2011^{2011}\right)\textrm{mod}~1000\equiv \left(11^{2011}\right)\textrm{mod}~1000\equiv \left(1+10\right)^{2011}\textrm{mod}~1000 \]
-          Kemudian, hasil akhir dijabarkan mengunakan <a href="https://en.wikipedia.org/wiki/Binomial_coefficient">Koefisien Binomial</a> sehingga
-          \[\left[1+\binom{2011}{1}10+\binom{2011}{2}10^{2}+\dots+10^{2011}\right]\textrm{mod}~1000\]
-          Diperoleh
-          \[\left[1+2011\times 10+\frac{2011\times 2010}{2}\times 100\right]\textrm{mod}~1000\equiv 1+110+500=611\]
-        </p>
-        <p>
-          Dengan demikian, digit ke-100 dari \(2011^{2011}\) adalah \(6\).
-        </p>
-        <br>
-        <p>
-          <b>GENERALISASI</b>. 
-        </p>
+        <p>Dengan demikian, digit ke-100 dari \(2011^{2011}\) adalah \(6\).</p>
+        <br />
+        <p><b>GENERALISASI</b>.</p>
       </section>
     </main>
   </body>
