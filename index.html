@@ -17,6 +17,10 @@
       }
       header {
         font-family: "Cinzel Decorative", sans-serif;
+        background-color: #ff7518;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
       }
       body {
         margin: 10px;
@@ -37,6 +41,10 @@
       p {
         margin-left: 12px;
       }
+      .parity {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     </style>
   </head>
   <body>
@@ -50,20 +58,19 @@
       >
         <h1>Archive</h1>
         <nav style="display: flex; gap: 8px">
-          <a style="text-decoration: none; color: black" href="maths.html"
+          <a style="text-decoration: none; color: white" href="maths.html"
             >Maths</a
           >
-          <a style="text-decoration: none; color: black" href="diaries.html"
+          <a style="text-decoration: none; color: white" href="diaries.html"
             >Diaries</a
           >
-          <a style="text-decoration: none; color: black" href="memorizing.html"
+          <a style="text-decoration: none; color: white" href="memorizing.html"
             >Read</a
           >
         </nav>
       </div>
       <h5>"This is the record of my life"</h5>
     </header>
-    <hr />
     <main>
       <section>
         <h2>--About me</h2>
@@ -72,6 +79,7 @@
           Nowdays, i'm a maths teacher in a private college called
           <a
             href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/starwinner.official/%3Fhl%3Den&ved=2ahUKEwibveeG7KOWAxUA4DgGHWT0CiYQFnoECEIQAQ&usg=AOvVaw3NCfuwn_pgObf9UTCv1R6R"
+            style="color: #ff7518; text-decoration: none"
             >Star Winner</a
           >
           in Gamping, Sleman. The students are senior high level and they're
@@ -79,6 +87,7 @@
           maths prodigy like
           <a
             href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Terence_Tao&ved=2ahUKEwiSsaKe7aOWAxUDTGwGHeDpJVUQFnoECDkQAQ&usg=AOvVaw2k02n2DMwj11gjdfJgvR1l"
+            style="color: #ff7518; text-decoration: none"
             >Terence Tao</a
           >
           or at least olympiad students. I'm just a simple human. I have other
@@ -92,8 +101,10 @@
           Writing moments is a powerful activity to appreciate life and raise
           emotional side of myself. When I'm in the old age, I can nostalgic to
           every moments that have been written in
-          <a href="diaries.html">diaries</a>. I like memorizing back scenes of
-          my life just to recall or get a good thing to the future scenes.
+          <a href="diaries.html" style="color: #ff7518; text-decoration: none"
+            >diaries</a
+          >. I like memorizing back scenes of my life just to recall or get a
+          good thing to the future scenes.
         </p>
         <p>
           I need these records. I don't want to live with only through it, but
@@ -106,32 +117,48 @@
         </p>
       </section>
       <hr />
-      <section>
-        <h2>--My Books</h2>
-        <p>
-          Total books that i've read: <span id="number_ofList">0</span> book
-        </p>
-        <p>Book Lists:</p>
-        <ol id="mylist">
-          <li>Atomic Habits - James Clear</li>
-          <li>The Psychology of Money - Morgan Housel</li>
-          <li>Filosofi Teras - Henry Manampiring</li>
-          <li>Belajar Marketing Belajar Hidup - Henry Manampiring</li>
-          <li>Bicara Itu Ada Seninya - Oh Su Hyang</li>
-          <li>Bumi - Tere Liye <b>N</b></li>
-          <li>Bulan - Tere Liye <b>N</b></li>
-          <li>Tentang Kamu - Tere Liye <b>N</b></li>
-          <li>Selamat Tinggal - Tere Liye <b>N</b></li>
-          <li>Sebuah Seni Bersikap Bodo Amat - Mark Manson</li>
-          <li>Berani Tidak Disukai - Ichiro Kishimi & Fumitake Koga</li>
-          <li>Jangan Menyerah - Yan Daryono <b>N</b></li>
-          <li>While The Light Last - Agatha Christie <b>N</b></li>
-          <li>The Power of Habit - Charles Duhig</li>
-          <li>Enggak Lari Enggak Keren - Agus Hermawan</li>
-        </ol>
+      <section class="parity">
+        <div>
+          <h2>--My Books</h2>
+          <p>
+            Total books that i've read:
+            <span id="number_ofList" style="color: #ff7518">0</span> book
+          </p>
+          <p>Book lists:</p>
+          <ol id="mylist">
+            <li>Atomic Habits - James Clear</li>
+            <li>The Psychology of Money - Morgan Housel</li>
+            <li>Filosofi Teras - Henry Manampiring</li>
+            <li>Belajar Marketing Belajar Hidup - Henry Manampiring</li>
+            <li>Bicara Itu Ada Seninya - Oh Su Hyang</li>
+            <li>Bumi - Tere Liye <b>N</b></li>
+            <li>Bulan - Tere Liye <b>N</b></li>
+            <li>Tentang Kamu - Tere Liye <b>N</b></li>
+            <li>Selamat Tinggal - Tere Liye <b>N</b></li>
+            <li>Sebuah Seni Bersikap Bodo Amat - Mark Manson</li>
+            <li>Berani Tidak Disukai - Ichiro Kishimi & Fumitake Koga</li>
+            <li>Jangan Menyerah - Yan Daryono <b>N</b></li>
+            <li>While The Light Last - Agatha Christie <b>N</b></li>
+            <li>The Power of Habit - Charles Duhig</li>
+            <li>Enggak Lari Enggak Keren - Agus Hermawan</li>
+          </ol>
+        </div>
+        <div>
+          <h2>--Newspaper</h2>
+          <p>
+            Total newspaper that i've read:
+            <span id="number_koranList" style="color: #ff7518">0</span>
+          </p>
+          <p>Newspaper lists:</p>
+          <ol id="mykoranList">
+            <li>30/9/2026 - Media Indonesia</li>
+          </ol>
+        </div>
         <script>
           const jumlahList = document.querySelectorAll("#mylist li").length;
+          const koranList = document.querySelectorAll("#mykoranList").length;
           document.getElementById("number_ofList").textContent = jumlahList;
+          document.getElementById("number_koranList").textContent = koranList;
         </script>
       </section>
     </main>
