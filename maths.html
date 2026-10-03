@@ -16,8 +16,14 @@
         padding: 0;
         /* font-family: "Jura", sans-serif; */
       }
+      html {
+        scroll-behavior: smooth;
+      }
       header {
-        font-family: "Cinzel Decorative", sans-serif;
+        background-color: #023047;
+        color: #ffb703;
+        padding: 8px;
+        border-radius: 10px;
       }
       body {
         margin: 10px;
@@ -43,6 +49,11 @@
       p {
         margin-left: 0px;
       }
+      .ancor_link {
+        text-decoration: none;
+        background-color: #8ecae6;
+        color: black;
+      }
     </style>
     <script
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
@@ -59,16 +70,23 @@
           justify-content: space-between;
         "
       >
-        <h1>Mathematics</h1>
+        <h1 style="margin-left: 10px">Mathematics</h1>
         <nav>
-          <a href="index.html" style="text-decoration: none; color: black"
-            >HOME</a
+          <a
+            style="
+              text-decoration: none;
+              color: #023047;
+              background-color: #ffb703;
+              padding: 4px;
+              border-radius: 4px;
+              margin-right: 18px;
+            "
+            href="index.html"
+            >Home</a
           >
         </nav>
       </div>
-      <h5>"Everytime, everywhere, there is a mathematics!"</h5>
     </header>
-    <hr />
     <main>
       <section>
         <div
@@ -169,7 +187,9 @@
           Diperhatikan berikut ini.
           \[\left(2011^{2011}\right)\textrm{mod}1000\equiv\left(1+10\right)^{2011}\textrm{mod}1000
           \] Kemudian, hasil akhir dijabarkan mengunakan
-          <a href="https://en.wikipedia.org/wiki/Binomial_coefficient"
+          <a
+            href="https://en.wikipedia.org/wiki/Binomial_coefficient"
+            class="ancor_link"
             >Koefisien Binomial</a
           >
           sehingga menjadi
@@ -199,5 +219,15 @@
         <p></p>
       </section>
     </main>
+    <footer
+      style="
+        background-color: #023047;
+        border-radius: 4px;
+        color: #ffb703;
+        padding: 12px 0px 12px 0px;
+      "
+    >
+      <h4 style="text-align: center">&copy Created by Huda, 2026</h4>
+    </footer>
   </body>
 </html>

@@ -15,16 +15,19 @@
         margin: 0;
         padding: 0;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       header {
-        font-family: "Cinzel Decorative", sans-serif;
-        background-color: #ff7518;
-        color: white;
+        background-color: #023047;
+        color: #ffb703;
         padding: 8px;
         border-radius: 10px;
       }
       body {
         margin: 10px;
         font-family: "Titillium Web", sans-serif;
+        background-color: ;
       }
       header h1 {
         margin-bottom: 5px;
@@ -45,6 +48,51 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
+      .ancor_link {
+        text-decoration: none;
+        background-color: #8ecae6;
+        color: black;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-btn {
+        background: #ffb703;
+        color: #023047;
+        padding: 4px 4px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 16px;
+        font-family: "Titillium Web", sans-serif;
+      }
+      .dropdown-btn:hover {
+        background-color: #2980b9;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 4px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+        z-index: 1;
+        border-radius: 4px;
+        margin-top: 5px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 8px 8px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .show {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -56,20 +104,38 @@
           justify-content: space-between;
         "
       >
-        <h1>Archive</h1>
-        <nav style="display: flex; gap: 8px">
-          <a style="text-decoration: none; color: white" href="maths.html"
-            >Maths</a
-          >
-          <a style="text-decoration: none; color: white" href="diaries.html"
-            >Diaries</a
-          >
-          <a style="text-decoration: none; color: white" href="memorizing.html"
-            >Read</a
-          >
+        <h1 style="margin-left: 10px">The Pages of Life</h1>
+        <div class="dropdown">
+          <button class="dropdown-btn" onclick="toggleMenu()">Menu</button>
+          <div id="dropdownContent" class="dropdown-content">
+            <a href="maths.html">Math</a>
+            <a href="diaries.html">Diaries</a>
+            <a href="read.html">Read</a>
+          </div>
+        </div>
+        <script>
+          function toggleMenu() {
+            document.getElementById("dropdownContent").classList.toggle("show");
+          }
+          window.onclick = function (event) {
+            if (!event.target.matches(".dropdown-btn")) {
+              var dropdowns =
+                document.getElementsByClassName("dropdown-content");
+              for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                  openDropdown.classList.remove("show");
+                }
+              }
+            }
+          };
+        </script>
+        <!-- <nav style="display: flex; gap: 8px">
+          <a class="ancor_link" href="maths.html">Maths</a>
+          <a class="ancor_link" href="diaries.html">Diaries</a>
+          <a class="ancor_link" href="memorizing.html">Read</a>
         </nav>
-      </div>
-      <h5>"This is the record of my life"</h5>
+      --></div>
     </header>
     <main>
       <section>
@@ -79,7 +145,7 @@
           Nowdays, i'm a maths teacher in a private college called
           <a
             href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/starwinner.official/%3Fhl%3Den&ved=2ahUKEwibveeG7KOWAxUA4DgGHWT0CiYQFnoECEIQAQ&usg=AOvVaw3NCfuwn_pgObf9UTCv1R6R"
-            style="color: #ff7518; text-decoration: none"
+            class="ancor_link"
             >Star Winner</a
           >
           in Gamping, Sleman. The students are senior high level and they're
@@ -87,7 +153,7 @@
           maths prodigy like
           <a
             href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Terence_Tao&ved=2ahUKEwiSsaKe7aOWAxUDTGwGHeDpJVUQFnoECDkQAQ&usg=AOvVaw2k02n2DMwj11gjdfJgvR1l"
-            style="color: #ff7518; text-decoration: none"
+            class="ancor_link"
             >Terence Tao</a
           >
           or at least olympiad students. I'm just a simple human. I have other
@@ -101,10 +167,9 @@
           Writing moments is a powerful activity to appreciate life and raise
           emotional side of myself. When I'm in the old age, I can nostalgic to
           every moments that have been written in
-          <a href="diaries.html" style="color: #ff7518; text-decoration: none"
-            >diaries</a
-          >. I like memorizing back scenes of my life just to recall or get a
-          good thing to the future scenes.
+          <a href="diaries.html" class="ancor_link">diaries</a>. I like
+          memorizing back scenes of my life just to recall or get a good thing
+          to the future scenes.
         </p>
         <p>
           I need these records. I don't want to live with only through it, but
@@ -122,7 +187,12 @@
           <h2>--My Books</h2>
           <p>
             Total books that i've read:
-            <span id="number_ofList" style="color: #ff7518">0</span> book
+            <span
+              id="number_ofList"
+              style="background-color: #fb8500; color: #023047"
+              >0</span
+            >
+            book
           </p>
           <p>Book lists:</p>
           <ol id="mylist">
@@ -147,7 +217,11 @@
           <h2>--Newspaper</h2>
           <p>
             Total newspaper that i've read:
-            <span id="number_koranList" style="color: #ff7518">0</span>
+            <span
+              id="number_koranList"
+              style="background-color: #fb8500; color: #023047"
+              >0</span
+            >
           </p>
           <p>Newspaper lists:</p>
           <ol id="mykoranList">
@@ -162,5 +236,8 @@
         </script>
       </section>
     </main>
+    <footer style="background-color: #023047; border-radius: 4px; color: #ffb703; padding: 12px 0px 12px 0px;">
+      <h4 style="text-align: center;">&copy Created by Huda, 2026</h4>
+    </footer>
   </body>
 </html>
