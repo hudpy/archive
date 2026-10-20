@@ -27,7 +27,7 @@
       body {
         margin: 10px;
         font-family: "Titillium Web", sans-serif;
-        background-color: ;
+        background-color:;
       }
       header h1 {
         margin-bottom: 5px;
@@ -110,7 +110,7 @@
           <div id="dropdownContent" class="dropdown-content">
             <a href="maths.html">Math</a>
             <a href="diaries.html">Diaries</a>
-            <a href="read.html">Read</a>
+            <a href="reading.html">Reading</a>
           </div>
         </div>
         <script>
@@ -139,7 +139,7 @@
     </header>
     <main>
       <section>
-        <h2>--About me</h2>
+        <h2 style="margin-top: 16px; margin-left: 12px">About me</h2>
         <p>
           Hello, Guys!. My name is Muhammad Nurul Huda, you can call me Huda.
           Nowdays, i'm a maths teacher in a private college called
@@ -181,10 +181,10 @@
           the withness that I won't give up to be good person."
         </p>
       </section>
-      <hr />
+
       <section class="parity">
         <div>
-          <h2>--My Books</h2>
+          <h2 style="margin-left: 12px">My Books</h2>
           <p>
             Total books that i've read:
             <span
@@ -214,7 +214,7 @@
           </ol>
         </div>
         <div>
-          <h2>--Newspaper</h2>
+          <h2 style="margin-left: 12px">Newspaper</h2>
           <p>
             Total newspaper that i've read:
             <span
@@ -226,18 +226,29 @@
           <p>Newspaper lists:</p>
           <ol id="mykoranList">
             <li>30/9/2026 - Media Indonesia</li>
+            <li>17/10/2026 - Media Indonesia</li>
+            <li>18/10/2026 - Kompas</li>
+            <li>19/10/2026 - Media Indonesia</li>
+            <li>19/10/2026 - Kompas</li>
           </ol>
         </div>
         <script>
           const jumlahList = document.querySelectorAll("#mylist li").length;
-          const koranList = document.querySelectorAll("#mykoranList").length;
+          const koranList = document.querySelectorAll("#mykoranList li").length;
           document.getElementById("number_ofList").textContent = jumlahList;
           document.getElementById("number_koranList").textContent = koranList;
         </script>
       </section>
     </main>
-    <footer style="background-color: #023047; border-radius: 4px; color: #ffb703; padding: 12px 0px 12px 0px;">
-      <h4 style="text-align: center;">&copy Created by Huda, 2026</h4>
+    <footer
+      style="
+        background-color: #023047;
+        border-radius: 4px;
+        color: #ffb703;
+        padding: 12px 0px 12px 0px;
+      "
+    >
+      <h4 style="text-align: center">&copy Created by Huda, 2026</h4>
     </footer>
   </body>
 </html>
